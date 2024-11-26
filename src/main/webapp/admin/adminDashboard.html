@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>관리자 대시보드</title>
+<link rel="stylesheet" href="../css/admin.css">
+<script>
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const day = now.getDate(); // 일
+    const month = now.getMonth() + 1; // 월 (0부터 시작하므로 +1)
+    const year = now.getFullYear(); // 연도
+    const weekday = now.toLocaleString('default', { weekday: 'short' }); // 요일 (예: Mon, Tue)
+
+    document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('current-date').textContent = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')} (${weekday})`; // 날짜 형식 (YYYY-MM-DD)
+}
+
+// 매초마다 시간 갱신
+setInterval(updateTime, 1000);
+
+// 최초 실행
+updateTime();
+</script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- 상단바 -->
+        <div class="header">
+		    <div class="logo">koreacompany</div>
+		    <div class="user-info">
+		        <span id="current-date"></span>
+		        <span id="current-time"></span>
+		        <span id="username">사용자 이름</span>
+    		</div>
+		</div>
+
+        <!-- 대시보드 콘텐츠 -->
+        <div class="dashboard-content">
+            <!-- 사이드바 -->
+            <nav class="sidebar">
+                <ul>
+                    <li>홈</li>
+                    <li>직원 관리</li>
+                    <li>공지사항</li>
+                    <li>커뮤니티</li>
+                </ul>
+            </nav>
+
+            <!-- 메인 콘텐츠 -->
+            <main class="main">
+                <!-- 직원 정보 -->
+                <section class="profile">
+                    <div class="photo"></div>
+                    <div class="details">
+                        <p><strong>이름:</strong> 홍길동</p>
+                        <p><strong>부서:</strong> 개발팀</p>
+                        <p><strong>직급:</strong> 사원</p>
+                        <p><strong>이메일:</strong> hong@company.com</p>
+                        <p><strong>전화번호:</strong> 010-1234-5678</p>
+                    </div>
+                </section>
+
+                <!-- 위젯 -->
+                <section class="widgets">
+                    <div class="widget">
+                        <h3>알림</h3>
+                        <p>내용 요약...</p>
+                        <button>더보기</button>
+                    </div>
+                    <div class="widget">
+                        <h3>커뮤니티</h3>
+                        <p>내용 요약...</p>
+                        <button>더보기</button>
+                    </div>
+                    <div class="widget">
+                        <h3>일정관리</h3>
+                        <p>내용 요약...</p>
+                        <button>더보기</button>
+                    </div>
+                    <div class="widget">
+                        <h3>공지사항</h3>
+                        <p>내용 요약...</p>
+                        <button>더보기</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

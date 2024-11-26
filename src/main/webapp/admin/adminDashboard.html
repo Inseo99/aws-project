@@ -5,6 +5,13 @@
 <title>관리자 대시보드</title>
 <link rel="stylesheet" href="../css/admin.css">
 <script>
+
+document.getElementById('employee-management').addEventListener('click', function(event) {
+    event.preventDefault(); // 링크 클릭 시 새로고침 방지
+    var submenu = this.querySelector('.submenu');
+    submenu.classList.toggle('visible'); // 서브메뉴 토글
+});
+
 function updateTime() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
@@ -24,6 +31,8 @@ setInterval(updateTime, 1000);
 
 // 최초 실행
 updateTime();
+
+
 </script>
 </head>
 <body>
@@ -43,11 +52,17 @@ updateTime();
             <!-- 사이드바 -->
             <nav class="sidebar">
                 <ul>
-                    <li>홈</li>
-                    <li>직원 관리</li>
-                    <li>공지사항</li>
-                    <li>커뮤니티</li>
-                </ul>
+				    <li class="menu-item">홈</li>
+				    <li class="menu-item" id="employee-management">직원 관리
+				        <ul class="submenu">
+				            <li><a href="#">부서 목록</a></li>
+				            <li><a href="#">직원 목록</a></li>
+				            <li><a href="#">직원 등록</a></li>
+				        </ul>
+				    </li>
+				    <li class="menu-item">공지사항</li>
+				    <li class="menu-item">커뮤니티</li>
+				</ul>
             </nav>
 
             <!-- 메인 콘텐츠 -->
@@ -68,12 +83,44 @@ updateTime();
                 <section class="widgets">
                     <div class="widget">
                         <h3>알림</h3>
-                        <p>내용 요약...</p>
+                        <table class="listTable">
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+						</table>
                         <button>더보기</button>
                     </div>
                     <div class="widget">
                         <h3>커뮤니티</h3>
-                        <p>내용 요약...</p>
+                        <table class="listTable">
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+						</table>
                         <button>더보기</button>
                     </div>
                     <div class="widget">
@@ -83,7 +130,33 @@ updateTime();
                     </div>
                     <div class="widget">
                         <h3>공지사항</h3>
-                        <p>내용 요약...</p>
+                        <table class="listTable">
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+							<tr>
+								<td>No</td>
+								<td>제목</td>
+								<td>날짜</td>
+							</tr>
+						</table>
                         <button>더보기</button>
                     </div>
                 </section>

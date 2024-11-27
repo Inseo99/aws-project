@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* 기본 설정 */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #5d99c6, #dfe9f3);
+}
+
+/* 전체 대시보드 레이아웃 */
+.List {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 상단바 */
+.header {
+    background-color: #3083af;
+    color: white;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* 사용자 정보 및 알림 아이콘 */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#current-time, #current-date {
+    font-size: 13px;
+    color: #e0e0e0;
+}
+
+/* 콘텐츠 영역 */
+.dashboard-content {
+    display: flex;
+    flex: 1;
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 150px;
+    height: 100%;
+    background-color: #577590;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    color: #a8dadc;
+}
+
+/* 서브메뉴 스타일 */
+.submenu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.submenu.visible {
+    max-height: 1000px;
+}
+
+.submenu li {
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.submenu li a,
+.menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.submenu li a:hover,
+.menu-item a:hover {
+    color: #a8dadc;
+}

@@ -19,7 +19,7 @@ body, html {
 
 /* 상단바 */
 .header {
-    background-color: #3083af;
+    background-color: #70c2e7;
     color: white;
     padding: 5px 20px;
     display: flex;
@@ -41,7 +41,7 @@ body, html {
 }
 
 /* 콘텐츠 영역 */
-.dashboard-content {
+.List-content {
     display: flex;
     flex: 1;
 }
@@ -97,3 +97,48 @@ body, html {
 .menu-item a:hover {
     color: #a8dadc;
 }
+
+/* 목록 테이블 */
+.main-list {
+	height: 100%;
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+header .mainTitle {
+	font-size: 15px; 
+	padding: 0px 20px; 
+}
+header .search { 
+	text-align: right; 
+	margin-bottom: 10px; 
+}
+
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.main-table th, .main-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    font-size: 15px;
+}
+
+.main-table td a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.main-table th {
+    background-color: #70c2e7;
+    color: white;
+}
+
+/* button */
+.btn { background: black; color: white; border-radius: 3px; border: none; width: 50px; height: 20px; 
+	cursor: pointer; display: inline-block; vertical-align: middle; font-size: 11px; text-align: center; text-decoration: none;}
+.btnBox { text-align:right; margin-top: 10px;}

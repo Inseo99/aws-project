@@ -142,3 +142,4 @@ header .search {
 .btn { background: black; color: white; border-radius: 3px; border: none; width: 50px; height: 20px; 
 	cursor: pointer; display: inline-block; vertical-align: middle; font-size: 11px; text-align: center; text-decoration: none;}
 .btnBox { text-align:right; margin-top: 10px;}
+.aBtn {	text-align: center; line-height: 20px; }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>직원 등록</title>
-<link rel="stylesheet" href="../css/list.css">
+<link rel="stylesheet" href="../css/save.css">
 <script>
 
 function updateTime() {
@@ -29,7 +29,7 @@ updateTime();
 </script>
 </head>
 <body>
-	<div class="List">
+	<div class="save">
         <!-- 상단바 -->
         <div class="header">
 		    <div class="logo">koreacompany</div>
@@ -40,9 +40,7 @@ updateTime();
 		        <a href="../login.jsp">로그 아웃</a>
     		</div>
 		</div>
-
-        <!-- 대시보드 콘텐츠 -->
-        <div class="List-content">
+        <div class="save-content">
             <!-- 사이드바 -->
             <nav class="sidebar">
                 <ul>
@@ -73,8 +71,59 @@ updateTime();
 				    <li class="menu-item"><a href="../public/communityList.html">커뮤니티</a></li>
 				</ul>
             </nav>
-
-            
+			<div class="employee-info-form">
+			    <h3 class="title-left">직원 정보 등록</h3>
+			    <form>
+			        <!-- 직원 정보 섹션 -->
+			        <table class="employee-table">
+			           <tr>
+						    <td class="photo-cell" rowspan="4">
+						        <div class="photo-box">
+						            <div class="photo-preview"></div>
+						            <label for="photo" class="upload-label">사진 첨부</label>
+						            <input type="file" id="photo" name="photo" accept="image/*" class="hidden-input">
+						        </div>
+						    </td>
+						    <th>직원번호</th>
+						    <td><input type="text" id="employee-id" name="employee-id" aria-labelledby="employee-id-label"></td>
+						    <th>이름</th>
+						    <td><input type="text" id="name" name="name" aria-labelledby="name-label"></td>
+						</tr>
+			            <tr>
+			                <th>연락처</th>
+			                <td><input type="text" id="contact" name="contact"></td>
+			                <th>긴급 연락처</th>
+			                <td><input type="text" id="emergency-contact" name="emergency-contact"></td>
+			            </tr>
+			            <tr>
+			                <th>부서</th>
+			                <td><input type="text" id="department" name="department"></td>
+			                <th>직급</th>
+			                <td><input type="text" id="position" name="position"></td>
+			            </tr>
+			            <tr>
+			                <th>입사일</th>
+			                <td><input type="date" id="join-date" name="join-date"></td>
+			                <th>퇴사일</th>
+			                <td><input type="date" id="leave-date" name="leave-date"></td>
+			            </tr>
+			        </table>
+			
+			        <!-- 근무 상태 섹션 -->
+			        <div class="form-section work-status">
+			            <label>근무 상태</label>
+			            <label><input type="radio" name="status" value="재직"> 재직</label>
+			            <label><input type="radio" name="status" value="휴직"> 휴직</label>
+			            <label><input type="radio" name="status" value="퇴직"> 퇴직</label>
+			        </div>
+			
+			        <!-- 저장/취소 버튼 -->
+			        <div class="btnBox">
+			            <button type="button" class="btn">저장</button>
+			            <a class="btn aBtn" onclick="history.back();">취소</a>
+			        </div>
+			    </form>
+			</div>           
         </div>
     </div>
     <script>

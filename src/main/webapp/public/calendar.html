@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>일정 관리</title>
-<link rel="stylesheet" href="../css/list.css">
+<link rel="stylesheet" href="../css/calender.css">
 <script>
 
 function updateTime() {
@@ -40,8 +40,6 @@ updateTime();
 		        <a href="../login.jsp">로그 아웃</a>
     		</div>
 		</div>
-
-        <!-- 대시보드 콘텐츠 -->
         <div class="List-content">
             <!-- 사이드바 -->
             <nav class="sidebar">
@@ -73,7 +71,31 @@ updateTime();
 				    <li class="menu-item"><a href="../public/communityList.html">커뮤니티</a></li>
 				</ul>
             </nav>
-
+			<div class="calendar-container">
+		        <!-- 달력 헤더 -->
+		        <div class="calendar-header">
+		            <button id="prev-month">◀</button>
+		            <h2 id="current-month">2024년 11월</h2>
+		            <button id="next-month">▶</button>
+		        </div>
+		
+		        <!-- 달력 본문 -->
+		        <div class="calendar">
+		            <!-- 요일 -->
+		            <div class="day-name">일</div>
+		            <div class="day-name">월</div>
+		            <div class="day-name">화</div>
+		            <div class="day-name">수</div>
+		            <div class="day-name">목</div>
+		            <div class="day-name">금</div>
+		            <div class="day-name">토</div>
+		
+		            <!-- 날짜 -->
+		            <!-- 날짜는 JavaScript로 채워질 공간 -->
+		            <div class="day"></div>
+		        </div>
+		    </div>
+			
             
         </div>
     </div>

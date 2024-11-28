@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>주간 보고</title>
-<link rel="stylesheet" href="../css/list.css">
+<title>주간보고</title>
+<link rel="stylesheet" href="../css/save.css">
 <script>
 
 function updateTime() {
@@ -29,7 +29,7 @@ updateTime();
 </script>
 </head>
 <body>
-	<div class="List">
+	<div class="save">
         <!-- 상단바 -->
         <div class="header">
 		    <div class="logo">koreacompany</div>
@@ -41,8 +41,8 @@ updateTime();
     		</div>
 		</div>
 
-        <!-- 대시보드 콘텐츠 -->
-        <div class="List-content">
+        <!-- 리스트 콘텐츠 -->
+        <div class="save-content">
             <!-- 사이드바 -->
             <nav class="sidebar">
                 <ul>
@@ -73,8 +73,38 @@ updateTime();
 				    <li class="menu-item"><a href="../public/communityList.html">커뮤니티</a></li>
 				</ul>
             </nav>
-
-            
+			<div class="info-form">
+                <h3>주간보고</h3>
+                <form>
+                <input type="hidden" name="reportType" value="week">
+                    <table class="combined-info-table">
+                        <tr>
+                            <th>제목</th>
+                            <td><input type="text" name="subject" id= "subject" required></td>
+                        </tr>
+                        <tr>
+							<th>첨부파일</th>
+							<td><input type="file" name = "filename"></td>
+						</tr>
+                        <tr>
+                            <th>이번주 한 일</th>
+                            <td colspan="3">
+                                <textarea name="contents" id="tw-contents" rows="6" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>다음주 한 일</th>
+                            <td colspan="3">
+                                <textarea name="contents" id="nw-contents" rows="6" required></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btnBox">
+			            <button type="button" class="btn">저장</button>
+			            <a class="btn aBtn" onclick="history.back();">취소</a>
+			        </div>
+                </form>
+            </div>
         </div>
     </div>
     <script>

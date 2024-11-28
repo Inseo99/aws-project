@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>개인정보</title>
+<title>개인 정보</title>
 <link rel="stylesheet" href="../css/save.css">
 <script>
 
@@ -40,8 +40,6 @@ updateTime();
 		        <a href="../login.jsp">로그 아웃</a>
     		</div>
 		</div>
-
-        <!-- 리스트 콘텐츠 -->
         <div class="save-content">
             <!-- 사이드바 -->
             <nav class="sidebar">
@@ -73,8 +71,80 @@ updateTime();
 				    <li class="menu-item"><a href="../public/communityList.html">커뮤니티</a></li>
 				</ul>
             </nav>
-
-            
+			<div class="info-form">
+			    <h3 class="title-left">개인 정보</h3>
+			    <form>
+			        <!-- 직원 정보 섹션 -->
+			        <table class="info-table">
+			           <tr>
+						    <td class="photo-cell" rowspan="4">
+						        <div class="photo-box">
+						            <div class="photo-preview"></div>
+						            <label for="photo" class="upload-label">사진 첨부</label>
+						            <input type="file" id="photo" name="photo" accept="image/*" class="hidden-input">
+						        </div>
+						    </td>
+						    <th>직원번호</th>
+						    <td><input type="text" id="employee-id" name="employee-id" aria-labelledby="employee-id-label"></td>
+						    <th>이름</th>
+						    <td><input type="text" id="name" name="name" aria-labelledby="name-label"></td>
+						</tr>
+			            <tr>
+			                <th>연락처</th>
+			                <td><input type="text" id="contact" name="contact"></td>
+			                <th>긴급 연락처</th>
+			                <td><input type="text" id="emergency-contact" name="emergency-contact"></td>
+			            </tr>
+			            <tr>
+			                <th>부서</th>
+			                <td><input type="text" id="department" name="department"></td>
+			                <th>직급</th>
+			                <td><input type="text" id="position" name="position"></td>
+			            </tr>
+			            <tr>
+			                <th>입사일</th>
+			                <td><input type="date" id="join-date" name="join-date"></td>
+			                <th>퇴사일</th>
+			                <td><input type="date" id="leave-date" name="leave-date"></td>
+			            </tr>
+			        </table>
+			        <table class="combined-info-table">
+					    <tr>
+					        <th style="border-top: none;">근무 상태</th>
+					        <td colspan="3" class="status-options">
+					            <input type="radio" name="status" value="재직"> 재직
+					            <input type="radio" name="status" value="휴직"> 휴직
+					            <input type="radio" name="status" value="퇴직"> 퇴직
+					        </td>
+					    </tr>
+					    <tr>
+					        <th>한자명</th>
+					        <td><input type="text" id="korean-name" name="korean-name"></td>
+					        <th>영문명</th>
+					        <td><input type="text" id="english-name" name="english-name"></td>
+					    </tr>
+					    <tr>
+					        <th>이메일</th>
+					        <td><input type="email" id="email" name="email"></td>
+					        <th>생년월일</th>
+					        <td><input type="date" id="birthday" name="birthday"></td>
+					    </tr>
+					    <tr>
+					        <th>주소</th>
+					        <td colspan="3"><input type="text" id="address" name="address"></td>
+					    </tr>
+					    <tr>
+					        <th>특이사항</th>
+					        <td colspan="3"><textarea id="special-notes" name="special-notes"></textarea></td>
+					    </tr>
+					</table>			
+			        <!-- 저장/취소 버튼 -->
+			        <div class="btnBox">
+			            <button type="button" class="btn">저장</button>
+			            <a class="btn aBtn" onclick="history.back();">취소</a>
+			        </div>
+			    </form>
+			</div>           
         </div>
     </div>
     <script>

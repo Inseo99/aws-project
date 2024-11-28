@@ -71,11 +71,11 @@ updateTime();
 				    <li class="menu-item"><a href="../public/communityList.html">커뮤니티</a></li>
 				</ul>
             </nav>
-			<div class="employee-info-form">
+			<div class="info-form">
 			    <h3 class="title-left">직원 정보 등록</h3>
 			    <form>
 			        <!-- 직원 정보 섹션 -->
-			        <table class="employee-table">
+			        <table class="info-table">
 			           <tr>
 						    <td class="photo-cell" rowspan="4">
 						        <div class="photo-box">
@@ -108,15 +108,48 @@ updateTime();
 			                <td><input type="date" id="leave-date" name="leave-date"></td>
 			            </tr>
 			        </table>
-			
-			        <!-- 근무 상태 섹션 -->
-			        <div class="form-section work-status">
-			            <label>근무 상태</label>
-			            <label><input type="radio" name="status" value="재직"> 재직</label>
-			            <label><input type="radio" name="status" value="휴직"> 휴직</label>
-			            <label><input type="radio" name="status" value="퇴직"> 퇴직</label>
-			        </div>
-			
+			        <table class="combined-info-table">
+					    <tr>
+					        <th style="border-top: none;">근무 상태</th>
+					        <td colspan="3" class="status-options">
+					            <input type="radio" name="status" value="재직"> 재직
+					            <input type="radio" name="status" value="휴직"> 휴직
+					            <input type="radio" name="status" value="퇴직"> 퇴직
+					        </td>
+					    </tr>
+					    <tr>
+					        <th>한자명</th>
+					        <td><input type="text" id="korean-name" name="korean-name"></td>
+					        <th>영문명</th>
+					        <td><input type="text" id="english-name" name="english-name"></td>
+					    </tr>
+					    <tr>
+					        <th>이메일</th>
+					        <td><input type="email" id="email" name="email"></td>
+					        <th>생년월일</th>
+					        <td><input type="date" id="birthday" name="birthday"></td>
+					    </tr>
+					    <tr>
+					        <th>주소</th>
+					        <td colspan="3"><input type="text" id="address" name="address"></td>
+					    </tr>
+					    <tr>
+					        <th>특이사항</th>
+					        <td colspan="3"><textarea id="special-notes" name="special-notes"></textarea></td>
+					    </tr>
+					    <tr>
+					        <th>아이디</th>
+					        <td><input type="text" id="username" name="username"></td>
+					        <th>비밀번호</th>
+					        <td><input type="password" id="password" name="password"></td>
+					    </tr>
+					    <tr>
+					        <th>월급여</th>
+					        <td><input type="text" id="salary" name="salary"></td>
+					        <th>남은 연차</th>
+					        <td><input type="text" id="remaining-leave" name="remaining-leave"></td>
+					    </tr>
+					</table>			
 			        <!-- 저장/취소 버튼 -->
 			        <div class="btnBox">
 			            <button type="button" class="btn">저장</button>

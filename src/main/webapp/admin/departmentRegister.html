@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>부서 등록</title>
-<link rel="stylesheet" href="../css/list.css">
+<link rel="stylesheet" href="../css/save.css">
 <script>
 
 function updateTime() {
@@ -29,7 +29,7 @@ updateTime();
 </script>
 </head>
 <body>
-	<div class="List">
+	<div class="save">
         <!-- 상단바 -->
         <div class="header">
 		    <div class="logo">koreacompany</div>
@@ -40,9 +40,7 @@ updateTime();
 		        <a href="../login.jsp">로그 아웃</a>
     		</div>
 		</div>
-
-        <!-- 대시보드 콘텐츠 -->
-        <div class="List-content">
+        <div class="save-content">
             <!-- 사이드바 -->
             <nav class="sidebar">
                 <ul>
@@ -73,8 +71,47 @@ updateTime();
 				    <li class="menu-item"><a href="../public/communityList.html">커뮤니티</a></li>
 				</ul>
             </nav>
-
-            
+			<div class="info-form">
+			    <h3 class="title-left">부서 정보 등록</h3>
+			    <form>
+			        <!-- 직원 정보 섹션 -->
+			        <table class="info-table">
+			           <tr>
+						    <th>부서번호</th>
+						    <td><input type="text" id="department-id" name="department-id" aria-labelledby="employee-id-label"></td>
+						    <th>부서이름</th>
+						    <td><input type="text" id=departmentName name="departmentName" aria-labelledby="name-label"></td>
+						</tr>
+			            <tr>
+			                <th>연락처</th>
+			                <td><input type="text" id="contact" name="contact"></td>
+			                <th>긴급 연락처</th>
+			                <td><input type="text" id="emergency-contact" name="emergency-contact"></td>
+			            </tr>
+			            <tr>
+			                <th>부서장</th>
+			                <td><input type="text" id="leaderName" name="leaderName"></td>
+			                <th>부서인원</th>
+			                <td><input type="text" id="people" name="people"></td>
+			            </tr>
+			            <tr>
+			                <th>부서생성일</th>
+			                <td><input type="date" id="join-date" name="join-date"></td>
+			            </tr>
+			        </table>
+			        <table class="combined-info-table">
+					    <tr>
+					        <th>부서 설명</th>
+					        <td colspan="3"><textarea id="department-notes" name="department-notes"></textarea></td>
+					    </tr>
+					</table>			
+			        <!-- 저장/취소 버튼 -->
+			        <div class="btnBox">
+			            <button type="button" class="btn">저장</button>
+			            <a class="btn aBtn" onclick="history.back();">취소</a>
+			        </div>
+			    </form>
+			</div>           
         </div>
     </div>
     <script>

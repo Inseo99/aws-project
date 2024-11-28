@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티</title>
-<link rel="stylesheet" href="../css/list.css">
+<link rel="stylesheet" href="../css/save.css">
 <script>
 
 function updateTime() {
@@ -29,7 +29,7 @@ updateTime();
 </script>
 </head>
 <body>
-	<div class="List">
+	<div class="save">
         <!-- 상단바 -->
         <div class="header">
 		    <div class="logo">koreacompany</div>
@@ -41,8 +41,8 @@ updateTime();
     		</div>
 		</div>
 
-        <!-- 대시보드 콘텐츠 -->
-        <div class="List-content">
+        <!-- 리스트 콘텐츠 -->
+        <div class="save-content">
             <!-- 사이드바 -->
             <nav class="sidebar">
                 <ul>
@@ -73,46 +73,35 @@ updateTime();
 				    <li class="menu-item"><a href="../public/communityList.html">커뮤니티</a></li>
 				</ul>
             </nav>
-			<!-- 목록 콘텐츠 -->
-            <div class="main-list">
-                <header>
-					<h2 class="mainTitle">커뮤니티</h2>
-					<form class="search" name = "frm" action = "./employeeList.html">
-						<select name = "searchType">
-							<option value = "name">작성자</option>
-							<option value = "department">제목</option>
-						</select>
-						<input type="text" name = "keyword">
-						<button type = "submit" class="btn">검색</button>
-					</form>
-				</header>
-                <table class="main-table">
-                    <thead>
+			<div class="info-form">
+                <h3>커뮤니티</h3>
+                <form>
+                    <table class="combined-info-table">
                         <tr>
-                            <th>번호</th>
                             <th>제목</th>
+                            <td><input type="text" name="subject" id= "subject" required></td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td colspan="3">
+                                <textarea name="contents" id="contents" rows="6" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
                             <th>작성자</th>
-                            <th>날짜</th>
-                            <th>삭제</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>사고싶은게 있는 고민되요</td>
-                            <td>플렉스</td>
-                            <td>2022-01-15</td>
+                            <td><input type="text" name="writer" id="writer" required></td>
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td>사내연에에 대한 진실</td>
-                            <td>비밀면애</td>
-                            <td>2021-11-10</td>
-                        </tr>
-                        <!-- 추가 직원들 -->
-                    </tbody>
-                </table>
-            </div>          
+							<th>첨부파일</th>
+							<td><input type="file" name = "filename"></td>
+						</tr>
+                    </table>
+                    <div class="btnBox">
+			            <button type="button" class="btn">저장</button>
+			            <a class="btn aBtn" onclick="history.back();">취소</a>
+			        </div>
+                </form>
+            </div>
         </div>
     </div>
     <script>

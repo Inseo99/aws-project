@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>출장 신청/승인</title>
+<title>출장 보고</title>
 <link rel="stylesheet" href="../css/save.css">
 <script>
 
@@ -73,8 +73,51 @@ updateTime();
 				    <li class="menu-item"><a href="../public/communityList.html">커뮤니티</a></li>
 				</ul>
             </nav>
-
-            
+			<div class="info-form">
+                <h3>출장 보고</h3>
+                <form>
+                    <table class="combined-info-table">
+                        <tr>
+                            <th>이름</th>
+                            <td><input type="text" name="name" id="name" required></td>
+                        </tr>
+                        <tr>
+                            <th>소속</th>
+                            <td><input type="text" name="department" id="department" required></td>
+                        </tr>
+                        <tr>
+                            <th>직급</th>
+                            <td><input type="text" name="position" id="position" required></td>
+                        </tr>
+                        <tr>
+                            <th>출장 종류</th>
+                            <td colspan="3" class="status-options">
+                                <label><input type="radio" name="bt-type" value="교육" required> 교육</label>
+                                <label><input type="radio" name="bt-type" value="외근"> 외근</label>
+                                <label><input type="radio" name="bt-type" value="출장"> 출장</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>출장 기간</th>
+                            <td colspan="3">
+                                <input type="date" name="start-date" id="start-date" required> ~ 
+                                <input type="date" name="end-date" id="end-date" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>사유</th>
+                            <td colspan="3">
+                                <textarea name="reason" id="reason" rows="4" placeholder="사유를 입력하세요" required></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btnBox">
+			            <button type="button" class="btn">제출</button>
+			            <button type="button" class="btn">승인</button>
+			            <a class="btn aBtn" onclick="history.back();">취소</a>
+			        </div>
+                </form>
+            </div>
         </div>
     </div>
     <script>

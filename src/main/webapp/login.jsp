@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	            </div>
 	            <button type="button" class="login-btn">로그인</button>
 	        </form>
-	        <p class="find-link">아이디/비밀번호찾기</p>
+	        <a class="find-link">회원가입</a>
+	        <a class="find-link">아이디/비밀번호찾기</p>
 	    </div>
 	</div>
 </body>
